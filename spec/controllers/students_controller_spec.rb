@@ -6,7 +6,7 @@ describe StudentsController do
     context "with valid attributes" do
       it "creates a new student" do
         expect{
-          post :create, params: { :first_name => "Sam", :last_name => "Smith" }
+          post :create, params: {:student => { :first_name => "Sam", :last_name => "Smith" }}
         }.to change(Student,:count).by(1)
       end
 
