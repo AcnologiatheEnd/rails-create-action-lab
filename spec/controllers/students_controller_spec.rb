@@ -11,7 +11,7 @@ describe StudentsController do
       end
 
       it "redirects to the new student" do
-        post :create, params: { :first_name => "Sam", :last_name => "Smith" }
+        post :create, params: {:student => { :first_name => "Sam", :last_name => "Smith" }}
         expect(response).to redirect_to Student.last
       end
     end
